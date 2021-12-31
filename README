@@ -1,0 +1,78 @@
+Included are six implementations of a recursive algorithm to calculate the
+nth Fibonacci number, along with invoking shell scripts for each.
+
+You may implement your assignments in one of the following languages:
+    * C17 (You may assume that the compiler will be GCC 10.3, which also
+      supports the upcoming C2x standard.)
+    * Python 3.9.5
+    * Java 11.0.12
+    * Node.js 14.7.6
+    * Clojure 1.10.3
+    * Kotlin 1.5.30 (Note that this is JVM-backed Kotlin, not Kotlin/Native.)
+
+To make automated grading possible, you will also need to submit two short
+shell scripts: one to compile your submission, one to run it. For example, all
+of the included Fibonacci implementations can be run using:
+
+    >$ ./compile.sh
+    >$ ./run.sh 12
+    144
+    >$
+
+Furthermore:
+    * For record-keeping purposes, you must submit only original source files.
+      Any directories, pre-compiled files, or compressed files will be ignored.
+    * You may not use *any* third party libraries (and your script won't have
+      Internet access when it's run, so you can't use apt/pip/npm/etc. to
+      install them), even if they are installed on Cal Poly's Unix servers.
+
+Everything you need to know about shell scripts to write your own script:
+    * Every shell script should start with a "shebang", which tells the OS how
+      to execute the file. To intrepret your script using Bash, which is the
+      default shell in this class's Linux grading environment:
+
+        #!/bin/sh
+
+    * In Bash, basically every value is a string. Bash interprets certain
+      strings as integers, depending on the context, and it has limited support
+      for associative arrays.
+
+    * In Bash, a variable is declared as follows (note the lack of spaces):
+
+        mystr="foo"
+
+    * In Bash, once a variable is declared, it is referenced by prefacing it
+      with a dollar sign:
+
+        $mystr
+
+    * In Bash, you can call a program exactly the same way you would from the
+      command line:
+
+        echo "Hello, world!"
+
+    * ...and you can substitute in variables:
+
+        echo $mystr
+
+    * But, remember, everything in Bash is interpreted as a string, and strings
+      can have spaces in them. To enure that a variable reference is always
+      treated as one value, you should wrap it in quotes:
+
+        echo "$mystr"
+
+    * The arguments to a Bash script are variables numbered starting with 1:
+
+        $1, $2, $3, ...
+
+    * So, putting that all together, if you need to write a Bash script that
+      runs your Python program, you might do something like:
+
+        #!/bin/sh
+        python3 my_program.py "$1"
+
+      Which says, "This is a Bash script. Run my_program.py through the Python
+      interpreter, passing it the same first argument that was passed to you."
+
+Everything you don't need to know about Bash scripts to write your own script:
+    http://www.tldp.org/LDP/abs/html/index.html

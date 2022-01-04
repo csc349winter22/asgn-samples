@@ -16,3 +16,4 @@ META-INF
 *.toc
 *.vrb
 *.cpt
+node_modules/

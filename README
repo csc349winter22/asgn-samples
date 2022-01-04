@@ -1,4 +1,4 @@
-Included are six implementations of a recursive algorithm to calculate the
+Included are seven implementations of a recursive algorithm to calculate the
 nth Fibonacci number, along with invoking shell scripts for each.
 
 You may implement your assignments in one of the following languages:
@@ -7,6 +7,7 @@ You may implement your assignments in one of the following languages:
     * Python 3.9.5
     * Java 11.0.12
     * Node.js 14.7.6
+    * Typescript 4.5.4 targeting Node.js 14.7.6
     * Clojure 1.10.3
     * Kotlin 1.5.30 (Note that this is JVM-backed Kotlin, not Kotlin/Native.)
 
